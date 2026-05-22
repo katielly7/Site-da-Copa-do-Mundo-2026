@@ -1,526 +1,293 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Copa do Mundo 2026</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-<title>Copa do Mundo 2026 - FlashScore Style</title>
+    body {
+      background: #0b1220;
+      color: white;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    header {
+      background: #e10600;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
 
-<style>
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background: #111827;
+      padding: 15px;
+      flex-wrap: wrap;
+    }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    nav button {
+      background: #1f2937;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
 
-body{
-    background:#0f1724;
-    color:white;
-    font-family:'Roboto',sans-serif;
-}
+    nav button:hover {
+      background: #e10600;
+      transform: scale(1.05);
+    }
 
-header{
-    background:#07121f;
-    padding:18px 25px;
-    border-bottom:2px solid #00ff87;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 20px;
+    }
 
-header h1{
-    color:#00ff87;
-    font-size:28px;
-}
+    .section {
+      display: none;
+      animation: fade 0.4s ease;
+    }
 
-.status{
-    color:#ccc;
-    font-size:14px;
-}
+    .active {
+      display: block;
+    }
 
-.container{
-    max-width:1400px;
-    margin:auto;
-    padding:20px;
-}
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-.tabs{
-    display:flex;
-    gap:10px;
-    margin-bottom:25px;
-    flex-wrap:wrap;
-}
+    .card {
+      background: #111827;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
 
-.tab{
-    background:#162133;
-    padding:12px 20px;
-    border-radius:8px;
-    cursor:pointer;
-    transition:0.3s;
-}
+    .match {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
 
-.tab:hover{
-    background:#00ff87;
-    color:black;
-}
+    .match:last-child {
+      border-bottom: none;
+    }
 
-.active{
-    background:#00ff87;
-    color:black;
-    font-weight:bold;
-}
+    .teams {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 18px;
+      font-weight: bold;
+    }
 
-.section-title{
-    margin-bottom:15px;
-    color:#00ff87;
-    font-size:22px;
-}
+    .score {
+      font-size: 22px;
+      font-weight: bold;
+      color: #22c55e;
+    }
 
-.match-card{
-    background:#162133;
-    border-radius:12px;
-    margin-bottom:15px;
-    overflow:hidden;
-    border:1px solid #23344f;
-}
+    .status {
+      font-size: 14px;
+      color: #facc15;
+      margin-top: 5px;
+    }
 
-.match-header{
-    background:#101a29;
-    padding:10px 15px;
-    display:flex;
-    justify-content:space-between;
-    color:#aaa;
-    font-size:14px;
-}
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 12px;
+    }
 
-.match-body{
-    padding:18px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+    .table th,
+    .table td {
+      padding: 14px;
+      text-align: center;
+    }
 
-.team{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    width:40%;
-}
+    .table th {
+      background: #e10600;
+    }
 
-.team img{
-    width:35px;
-    height:25px;
-    object-fit:cover;
-    border-radius:3px;
-}
+    .table tr:nth-child(even) {
+      background: #1f2937;
+    }
 
-.score{
-    font-size:32px;
-    font-weight:bold;
-    color:#00ff87;
-}
+    .table tr:nth-child(odd) {
+      background: #111827;
+    }
 
-.live{
-    background:red;
-    color:white;
-    padding:4px 8px;
-    border-radius:6px;
-    font-size:12px;
-    margin-left:10px;
-}
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background: #111827;
+      color: #9ca3af;
+    }
 
-.group-table{
-    background:#162133;
-    border-radius:12px;
-    overflow:hidden;
-    margin-top:30px;
-}
+    @media (max-width: 700px) {
+      .match {
+        flex-direction: column;
+        gap: 10px;
+      }
 
-.group-header{
-    background:#101a29;
-    padding:15px;
-    color:#00ff87;
-    font-size:18px;
-    font-weight:bold;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-}
-
-th{
-    background:#132033;
-    color:#ccc;
-    padding:12px;
-    font-size:13px;
-}
-
-td{
-    padding:12px;
-    border-top:1px solid #22324f;
-    text-align:center;
-}
-
-.team-name{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.team-name img{
-    width:28px;
-    height:20px;
-}
-
-.qualify{
-    background:#123f2d;
-}
-
-.eliminated{
-    background:#3a1b1b;
-}
-
-.bracket{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    margin-top:30px;
-}
-
-.bracket-round{
-    background:#162133;
-    border-radius:12px;
-    padding:20px;
-}
-
-.bracket-round h3{
-    color:#00ff87;
-    margin-bottom:15px;
-}
-
-.bracket-match{
-    background:#101a29;
-    padding:12px;
-    border-radius:8px;
-    margin-bottom:10px;
-}
-
-.players{
-    margin-top:40px;
-}
-
-.player-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:20px;
-}
-
-.player-card{
-    background:#162133;
-    border-radius:12px;
-    padding:15px;
-    text-align:center;
-}
-
-.player-card img{
-    width:100px;
-    height:100px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:10px;
-    border:3px solid #00ff87;
-}
-
-.player-card h4{
-    margin-bottom:5px;
-}
-
-.player-card p{
-    color:#aaa;
-}
-
-footer{
-    text-align:center;
-    padding:30px;
-    color:#888;
-}
-
-@media(max-width:768px){
-
-.match-body{
-    flex-direction:column;
-    gap:15px;
-}
-
-.team{
-    width:100%;
-    justify-content:center;
-}
-
-.score{
-    font-size:28px;
-}
-
-}
-
-</style>
+      .score {
+        font-size: 28px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-    <h1>⚽ Copa do Mundo 2026</h1>
-    <div class="status">FlashScore Style</div>
-</header>
+  <header>
+    ⚽ Copa do Mundo 2026
+  </header>
 
-<div class="container">
+  <nav>
+    <button onclick="showSection('jogos')">Jogos</button>
+    <button onclick="showSection('grupos')">Grupos</button>
+    <button onclick="showSection('artilheiros')">Artilheiros</button>
+  </nav>
 
-<div class="tabs">
-    <div class="tab active">Jogos</div>
-    <div class="tab">Tabela</div>
-    <div class="tab">Eliminatórias</div>
-    <div class="tab">Escalações</div>
-</div>
+  <div class="container">
 
-<h2 class="section-title">Jogos Ao Vivo</h2>
+    <section id="jogos" class="section active">
+      <div class="card">
+        <h2>Jogos Ao Vivo</h2>
 
-<!-- JOGO -->
-<div class="match-card">
-
-    <div class="match-header">
-        <div>12/06/2026 - 16:00</div>
-        <div>Grupo A <span class="live">AO VIVO</span></div>
-    </div>
-
-    <div class="match-body">
-
-        <div class="team">
-            <img src="https://flagcdn.com/w80/br.png">
-            <span>Brasil</span>
+        <div class="match">
+          <div>
+            <div class="teams">🇧🇷 Brasil vs 🇦🇷 Argentina</div>
+            <div class="status">2º Tempo - 78'</div>
+          </div>
+          <div class="score">2 - 1</div>
         </div>
 
-        <div class="score">
-            2 - 1
+        <div class="match">
+          <div>
+            <div class="teams">🇫🇷 França vs 🇩🇪 Alemanha</div>
+            <div class="status">Intervalo</div>
+          </div>
+          <div class="score">1 - 1</div>
         </div>
 
-        <div class="team" style="justify-content:flex-end;">
-            <span>Argentina</span>
-            <img src="https://flagcdn.com/w80/ar.png">
+        <div class="match">
+          <div>
+            <div class="teams">🇵🇹 Portugal vs 🇪🇸 Espanha</div>
+            <div class="status">Hoje - 21:00</div>
+          </div>
+          <div class="score">-</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="grupos" class="section">
+      <div class="card">
+        <h2>Classificação Grupo A</h2>
+
+        <table class="table">
+          <tr>
+            <th>Seleção</th>
+            <th>Pts</th>
+            <th>JG</th>
+            <th>SG</th>
+          </tr>
+
+          <tr>
+            <td>🇧🇷 Brasil</td>
+            <td>6</td>
+            <td>2</td>
+            <td>+4</td>
+          </tr>
+
+          <tr>
+            <td>🇦🇷 Argentina</td>
+            <td>4</td>
+            <td>2</td>
+            <td>+1</td>
+          </tr>
+
+          <tr>
+            <td>🇫🇷 França</td>
+            <td>1</td>
+            <td>2</td>
+            <td>-2</td>
+          </tr>
+
+          <tr>
+            <td>🇩🇪 Alemanha</td>
+            <td>0</td>
+            <td>2</td>
+            <td>-3</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="artilheiros" class="section">
+      <div class="card">
+        <h2>Artilheiros</h2>
+
+        <div class="match">
+          <div class="teams">⚽ Vinicius Jr.</div>
+          <div class="score">5 gols</div>
         </div>
 
-    </div>
-
-</div>
-
-<!-- JOGO -->
-<div class="match-card">
-
-    <div class="match-header">
-        <div>13/06/2026 - 20:00</div>
-        <div>Grupo A</div>
-    </div>
-
-    <div class="match-body">
-
-        <div class="team">
-            <img src="https://flagcdn.com/w80/fr.png">
-            <span>França</span>
+        <div class="match">
+          <div class="teams">⚽ Mbappé</div>
+          <div class="score">4 gols</div>
         </div>
 
-        <div class="score">
-            1 - 1
+        <div class="match">
+          <div class="teams">⚽ Haaland</div>
+          <div class="score">3 gols</div>
         </div>
+      </div>
+    </section>
 
-        <div class="team" style="justify-content:flex-end;">
-            <span>Alemanha</span>
-            <img src="https://flagcdn.com/w80/de.png">
-        </div>
+  </div>
 
-    </div>
+  <footer>
+    Desenvolvido para GitHub Pages • Copa do Mundo 2026
+  </footer>
 
-</div>
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
 
-<!-- TABELA -->
-<div class="group-table">
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
 
-<div class="group-header">
-Grupo A
-</div>
-
-<table>
-
-<tr>
-    <th>#</th>
-    <th>Seleção</th>
-    <th>PTS</th>
-    <th>J</th>
-    <th>V</th>
-    <th>E</th>
-    <th>D</th>
-    <th>SG</th>
-</tr>
-
-<tr class="qualify">
-    <td>1</td>
-    <td class="team-name">
-        <img src="https://flagcdn.com/w80/br.png">
-        Brasil
-    </td>
-    <td>6</td>
-    <td>2</td>
-    <td>2</td>
-    <td>0</td>
-    <td>0</td>
-    <td>+4</td>
-</tr>
-
-<tr class="qualify">
-    <td>2</td>
-    <td class="team-name">
-        <img src="https://flagcdn.com/w80/ar.png">
-        Argentina
-    </td>
-    <td>3</td>
-    <td>2</td>
-    <td>1</td>
-    <td>0</td>
-    <td>1</td>
-    <td>+1</td>
-</tr>
-
-<tr class="eliminated">
-    <td>3</td>
-    <td class="team-name">
-        <img src="https://flagcdn.com/w80/fr.png">
-        França
-    </td>
-    <td>1</td>
-    <td>2</td>
-    <td>0</td>
-    <td>1</td>
-    <td>1</td>
-    <td>-2</td>
-</tr>
-
-<tr class="eliminated">
-    <td>4</td>
-    <td class="team-name">
-        <img src="https://flagcdn.com/w80/de.png">
-        Alemanha
-    </td>
-    <td>1</td>
-    <td>2</td>
-    <td>0</td>
-    <td>1</td>
-    <td>1</td>
-    <td>-3</td>
-</tr>
-
-</table>
-
-</div>
-
-<!-- ELIMINATÓRIAS -->
-<h2 class="section-title">Chaveamento</h2>
-
-<div class="bracket">
-
-<div class="bracket-round">
-
-<h3>Oitavas</h3>
-
-<div class="bracket-match">
-🇧🇷 Brasil vs 🇺🇸 EUA
-</div>
-
-<div class="bracket-match">
-🇦🇷 Argentina vs 🇫🇷 França
-</div>
-
-</div>
-
-<div class="bracket-round">
-
-<h3>Quartas</h3>
-
-<div class="bracket-match">
-🇧🇷 Brasil vs 🇦🇷 Argentina
-</div>
-
-</div>
-
-<div class="bracket-round">
-
-<h3>Semifinal</h3>
-
-<div class="bracket-match">
-🇧🇷 Brasil vs 🇪🇸 Espanha
-</div>
-
-</div>
-
-<div class="bracket-round">
-
-<h3>Final</h3>
-
-<div class="bracket-match">
-🏆 Brasil vs França
-</div>
-
-</div>
-
-</div>
-
-<!-- ESCALAÇÃO -->
-<div class="players">
-
-<h2 class="section-title">Escalação do Brasil</h2>
-
-<div class="player-grid">
-
-<div class="player-card">
-    <img src="https://img.a.transfermarkt.technology/portrait/big/105470-1699389951.jpg">
-    <h4>Alisson</h4>
-    <p>Goleiro</p>
-</div>
-
-<div class="player-card">
-    <img src="https://img.a.transfermarkt.technology/portrait/big/181767-1667833561.jpg">
-    <h4>Marquinhos</h4>
-    <p>Zagueiro</p>
-</div>
-
-<div class="player-card">
-    <img src="https://img.a.transfermarkt.technology/portrait/big/371998-1664869583.jpg">
-    <h4>Vinicius Jr</h4>
-    <p>Atacante</p>
-</div>
-
-<div class="player-card">
-    <img src="https://img.a.transfermarkt.technology/portrait/big/412363-1699381489.jpg">
-    <h4>Rodrygo</h4>
-    <p>Atacante</p>
-</div>
-
-<div class="player-card">
-    <img src="https://img.a.transfermarkt.technology/portrait/big/68290-1667830795.jpg">
-    <h4>Neymar</h4>
-    <p>Camisa 10</p>
-</div>
-
-</div>
-
-</div>
-
-<footer>
-© Copa do Mundo FIFA 2026 - Layout inspirado no FlashScore
-</footer>
-
-</div>
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
