@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Copa do Mundo 2026</title>
+  <title>Copa do Mundo 2026 - FlashScore Style</title>
+
   <style>
     * {
       margin: 0;
@@ -13,7 +14,7 @@
     }
 
     body {
-      background: #0b1220;
+      background: #0f172a;
       color: white;
     }
 
@@ -21,30 +22,29 @@
       background: #e10600;
       padding: 20px;
       text-align: center;
-      font-size: 28px;
+      font-size: 30px;
       font-weight: bold;
-      letter-spacing: 1px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
 
     nav {
       display: flex;
       justify-content: center;
       gap: 15px;
+      flex-wrap: wrap;
       background: #111827;
       padding: 15px;
-      flex-wrap: wrap;
     }
 
     nav button {
       background: #1f2937;
       color: white;
       border: none;
-      padding: 10px 18px;
-      border-radius: 8px;
+      padding: 12px 18px;
+      border-radius: 10px;
       cursor: pointer;
-      transition: 0.3s;
       font-weight: bold;
+      transition: 0.3s;
     }
 
     nav button:hover {
@@ -53,18 +53,18 @@
     }
 
     .container {
-      max-width: 1100px;
-      margin: 30px auto;
+      max-width: 1300px;
+      margin: auto;
       padding: 20px;
     }
 
     .section {
       display: none;
-      animation: fade 0.4s ease;
     }
 
     .active {
       display: block;
+      animation: fade 0.4s ease;
     }
 
     @keyframes fade {
@@ -80,214 +80,318 @@
 
     .card {
       background: #111827;
-      border-radius: 14px;
       padding: 20px;
+      border-radius: 16px;
       margin-bottom: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #facc15;
     }
 
     .match {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: #1f2937;
       padding: 15px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .match:last-child {
-      border-bottom: none;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .teams {
-      display: flex;
-      align-items: center;
-      gap: 12px;
       font-size: 18px;
       font-weight: bold;
     }
 
     .score {
+      color: #22c55e;
       font-size: 22px;
       font-weight: bold;
-      color: #22c55e;
     }
 
     .status {
-      font-size: 14px;
       color: #facc15;
-      margin-top: 5px;
+      font-size: 14px;
     }
 
-    .table {
-      width: 100%;
-      border-collapse: collapse;
-      overflow: hidden;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .team-card {
+      background: #1f2937;
+      padding: 15px;
       border-radius: 12px;
-    }
-
-    .table th,
-    .table td {
-      padding: 14px;
       text-align: center;
+      transition: 0.3s;
     }
 
-    .table th {
+    .team-card:hover {
+      transform: translateY(-5px);
       background: #e10600;
     }
 
-    .table tr:nth-child(even) {
+    .bet-box {
       background: #1f2937;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
     }
 
-    .table tr:nth-child(odd) {
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: none;
       background: #111827;
+      color: white;
+    }
+
+    .btn {
+      background: #e10600;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .bet-history {
+      margin-top: 20px;
+    }
+
+    .bet-item {
+      background: #111827;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 10px;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
       background: #111827;
+      margin-top: 40px;
       color: #9ca3af;
     }
 
-    @media (max-width: 700px) {
+    @media(max-width:700px) {
       .match {
         flex-direction: column;
-        gap: 10px;
-      }
-
-      .score {
-        font-size: 28px;
+        text-align: center;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    ⚽ Copa do Mundo 2026
-  </header>
+<header>
+  ⚽ Copa do Mundo 2026
+</header>
 
-  <nav>
-    <button onclick="showSection('jogos')">Jogos</button>
-    <button onclick="showSection('grupos')">Grupos</button>
-    <button onclick="showSection('artilheiros')">Artilheiros</button>
-  </nav>
+<nav>
+  <button onclick="showSection('jogos')">Jogos</button>
+  <button onclick="showSection('selecoes')">48 Seleções</button>
+  <button onclick="showSection('apostas')">Apostas</button>
+</nav>
 
-  <div class="container">
+<div class="container">
 
-    <section id="jogos" class="section active">
-      <div class="card">
-        <h2>Jogos Ao Vivo</h2>
+  <section id="jogos" class="section active">
+    <div class="card">
+      <h2>Jogos Ao Vivo</h2>
 
-        <div class="match">
-          <div>
-            <div class="teams">🇧🇷 Brasil vs 🇦🇷 Argentina</div>
-            <div class="status">2º Tempo - 78'</div>
-          </div>
-          <div class="score">2 - 1</div>
+      <div class="match">
+        <div>
+          <div class="teams">🇧🇷 Brasil vs 🇦🇷 Argentina</div>
+          <div class="status">2º Tempo - 74'</div>
         </div>
-
-        <div class="match">
-          <div>
-            <div class="teams">🇫🇷 França vs 🇩🇪 Alemanha</div>
-            <div class="status">Intervalo</div>
-          </div>
-          <div class="score">1 - 1</div>
-        </div>
-
-        <div class="match">
-          <div>
-            <div class="teams">🇵🇹 Portugal vs 🇪🇸 Espanha</div>
-            <div class="status">Hoje - 21:00</div>
-          </div>
-          <div class="score">-</div>
-        </div>
+        <div class="score">2 - 1</div>
       </div>
-    </section>
 
-    <section id="grupos" class="section">
-      <div class="card">
-        <h2>Classificação Grupo A</h2>
-
-        <table class="table">
-          <tr>
-            <th>Seleção</th>
-            <th>Pts</th>
-            <th>JG</th>
-            <th>SG</th>
-          </tr>
-
-          <tr>
-            <td>🇧🇷 Brasil</td>
-            <td>6</td>
-            <td>2</td>
-            <td>+4</td>
-          </tr>
-
-          <tr>
-            <td>🇦🇷 Argentina</td>
-            <td>4</td>
-            <td>2</td>
-            <td>+1</td>
-          </tr>
-
-          <tr>
-            <td>🇫🇷 França</td>
-            <td>1</td>
-            <td>2</td>
-            <td>-2</td>
-          </tr>
-
-          <tr>
-            <td>🇩🇪 Alemanha</td>
-            <td>0</td>
-            <td>2</td>
-            <td>-3</td>
-          </tr>
-        </table>
+      <div class="match">
+        <div>
+          <div class="teams">🇫🇷 França vs 🇩🇪 Alemanha</div>
+          <div class="status">Intervalo</div>
+        </div>
+        <div class="score">1 - 1</div>
       </div>
-    </section>
 
-    <section id="artilheiros" class="section">
-      <div class="card">
-        <h2>Artilheiros</h2>
-
-        <div class="match">
-          <div class="teams">⚽ Vinicius Jr.</div>
-          <div class="score">5 gols</div>
+      <div class="match">
+        <div>
+          <div class="teams">🇵🇹 Portugal vs 🇪🇸 Espanha</div>
+          <div class="status">Hoje - 21:00</div>
         </div>
-
-        <div class="match">
-          <div class="teams">⚽ Mbappé</div>
-          <div class="score">4 gols</div>
-        </div>
-
-        <div class="match">
-          <div class="teams">⚽ Haaland</div>
-          <div class="score">3 gols</div>
-        </div>
+        <div class="score">-</div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </div>
+  <section id="selecoes" class="section">
+    <div class="card">
+      <h2>As 48 Seleções</h2>
 
-  <footer>
-    Desenvolvido para GitHub Pages • Copa do Mundo 2026
-  </footer>
+      <div class="grid">
+        <div class="team-card">🇧🇷 Brasil</div>
+        <div class="team-card">🇦🇷 Argentina</div>
+        <div class="team-card">🇫🇷 França</div>
+        <div class="team-card">🇩🇪 Alemanha</div>
+        <div class="team-card">🇪🇸 Espanha</div>
+        <div class="team-card">🇵🇹 Portugal</div>
+        <div class="team-card">🏴 Inglaterra</div>
+        <div class="team-card">🇮🇹 Itália</div>
+        <div class="team-card">🇳🇱 Holanda</div>
+        <div class="team-card">🇧🇪 Bélgica</div>
+        <div class="team-card">🇭🇷 Croácia</div>
+        <div class="team-card">🇺🇾 Uruguai</div>
+        <div class="team-card">🇺🇸 Estados Unidos</div>
+        <div class="team-card">🇲🇽 México</div>
+        <div class="team-card">🇨🇦 Canadá</div>
+        <div class="team-card">🇯🇵 Japão</div>
+        <div class="team-card">🇰🇷 Coreia do Sul</div>
+        <div class="team-card">🇨🇳 China</div>
+        <div class="team-card">🇸🇦 Arábia Saudita</div>
+        <div class="team-card">🇦🇺 Austrália</div>
+        <div class="team-card">🇮🇷 Irã</div>
+        <div class="team-card">🇸🇳 Senegal</div>
+        <div class="team-card">🇲🇦 Marrocos</div>
+        <div class="team-card">🇳🇬 Nigéria</div>
+        <div class="team-card">🇪🇬 Egito</div>
+        <div class="team-card">🇨🇲 Camarões</div>
+        <div class="team-card">🇬🇭 Gana</div>
+        <div class="team-card">🇨🇴 Colômbia</div>
+        <div class="team-card">🇨🇱 Chile</div>
+        <div class="team-card">🇵🇪 Peru</div>
+        <div class="team-card">🇪🇨 Equador</div>
+        <div class="team-card">🇵🇾 Paraguai</div>
+        <div class="team-card">🇵🇱 Polônia</div>
+        <div class="team-card">🇨🇭 Suíça</div>
+        <div class="team-card">🇩🇰 Dinamarca</div>
+        <div class="team-card">🇷🇸 Sérvia</div>
+        <div class="team-card">🇹🇷 Turquia</div>
+        <div class="team-card">🇸🇪 Suécia</div>
+        <div class="team-card">🇳🇴 Noruega</div>
+        <div class="team-card">🇺🇦 Ucrânia</div>
+        <div class="team-card">🇦🇹 Áustria</div>
+        <div class="team-card">🇬🇷 Grécia</div>
+        <div class="team-card">🇨🇿 República Tcheca</div>
+        <div class="team-card">🇷🇴 Romênia</div>
+        <div class="team-card">🇭🇺 Hungria</div>
+        <div class="team-card">🇫🇮 Finlândia</div>
+        <div class="team-card">🇮🇸 Islândia</div>
+        <div class="team-card">🇮🇪 Irlanda</div>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    function showSection(sectionId) {
-      const sections = document.querySelectorAll('.section');
+  <section id="apostas" class="section">
+    <div class="card">
+      <h2>Faça Sua Aposta</h2>
 
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
+      <div class="bet-box">
+        <label>Escolha o jogo</label>
+        <select id="jogo">
+          <option>Brasil vs Argentina</option>
+          <option>França vs Alemanha</option>
+          <option>Portugal vs Espanha</option>
+          <option>Inglaterra vs Itália</option>
+        </select>
 
-      document.getElementById(sectionId).classList.add('active');
+        <label>Seu palpite</label>
+        <input type="text" id="palpite" placeholder="Ex: 2x1 Brasil" />
+
+        <label>Seu nome</label>
+        <input type="text" id="nome" placeholder="Digite seu nome" />
+
+        <button class="btn" onclick="salvarAposta()">Salvar Aposta</button>
+
+        <div class="bet-history" id="historico"></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  Desenvolvido para GitHub Pages • FlashScore Style • Copa do Mundo 2026
+</footer>
+
+<script>
+
+  function showSection(sectionId) {
+    const sections = document.querySelectorAll('.section');
+
+    sections.forEach(section => {
+      section.classList.remove('active');
+    });
+
+    document.getElementById(sectionId).classList.add('active');
+  }
+
+  function salvarAposta() {
+    const jogo = document.getElementById('jogo').value;
+    const palpite = document.getElementById('palpite').value;
+    const nome = document.getElementById('nome').value;
+
+    if(nome === '' || palpite === '') {
+      alert('Preencha todos os campos!');
+      return;
     }
-  </script>
+
+    const aposta = {
+      jogo,
+      palpite,
+      nome
+    };
+
+    let apostas = JSON.parse(localStorage.getItem('apostas')) || [];
+
+    apostas.push(aposta);
+
+    localStorage.setItem('apostas', JSON.stringify(apostas));
+
+    mostrarApostas();
+
+    document.getElementById('palpite').value = '';
+    document.getElementById('nome').value = '';
+  }
+
+  function mostrarApostas() {
+    const historico = document.getElementById('historico');
+
+    let apostas = JSON.parse(localStorage.getItem('apostas')) || [];
+
+    historico.innerHTML = '';
+
+    apostas.forEach(aposta => {
+      historico.innerHTML += `
+        <div class="bet-item">
+          <strong>${aposta.nome}</strong><br>
+          Jogo: ${aposta.jogo}<br>
+          Palpite: ${aposta.palpite}
+        </div>
+      `;
+    });
+  }
+
+  mostrarApostas();
+
+</script>
 
 </body>
 </html>
