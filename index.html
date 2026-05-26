@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Copa do Mundo 2026 - FlashScore Style</title>
+  <title>Copa do Mundo 2026</title>
 
   <style>
     * {
@@ -22,7 +22,7 @@
       background: #e10600;
       padding: 20px;
       text-align: center;
-      font-size: 30px;
+      font-size: 32px;
       font-weight: bold;
       box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
@@ -34,6 +34,9 @@
       flex-wrap: wrap;
       background: #111827;
       padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     nav button {
@@ -131,6 +134,7 @@
       border-radius: 12px;
       text-align: center;
       transition: 0.3s;
+      cursor: pointer;
     }
 
     .team-card:hover {
@@ -208,358 +212,279 @@
   <button onclick="showSection('jogos')">Jogos</button>
   <button onclick="showSection('proximos')">Próximos Jogos</button>
   <button onclick="showSection('grupos')">Fase de Grupos</button>
-  <button onclick="showSection('selecoes')">48 Seleções</button>
+  <button onclick="showSection('selecoes')">Seleções</button>
   <button onclick="showSection('campeoes')">Campeões</button>
   <button onclick="showSection('apostas')">Apostas</button>
 </nav>
 
 <div class="container">
 
-  <section id="jogos" class="section active">
-    <div class="card">
-      <h2>Jogos da Semana</h2>
+<section id="jogos" class="section active">
+  <div class="card">
+    <h2>Jogos da Semana</h2>
 
-      <div class="match">
-        <div>
-          <div class="teams">🇧🇷 Brasil vs 🇷🇸 Sérvia</div>
-          <div class="status">Segunda • 15/06/2026 • 16:00</div>
-        </div>
-        <div class="score">Em breve</div>
+    <div class="match">
+      <div>
+        <div class="teams">🇲🇽 México vs 🇿🇦 África do Sul</div>
+        <div class="status">11/06/2026 • Cidade do México</div>
+      </div>
+      <div class="score">Em breve</div>
+    </div>
+
+    <div class="match">
+      <div>
+        <div class="teams">🇧🇷 Brasil vs 🇲🇦 Marrocos</div>
+        <div class="status">13/06/2026 • Nova Jersey</div>
+      </div>
+      <div class="score">Em breve</div>
+    </div>
+
+    <div class="match">
+      <div>
+        <div class="teams">🇺🇸 Estados Unidos vs 🇵🇾 Paraguai</div>
+        <div class="status">12/06/2026 • Los Angeles</div>
+      </div>
+      <div class="score">Em breve</div>
+    </div>
+
+    <div class="match">
+      <div>
+        <div class="teams">🇫🇷 França vs 🇸🇳 Senegal</div>
+        <div class="status">16/06/2026 • Nova Jersey</div>
+      </div>
+      <div class="score">Em breve</div>
+    </div>
+
+  </div>
+</section>
+
+<section id="proximos" class="section">
+  <div class="card">
+    <h2>Próximos Jogos</h2>
+
+    <div class="match">
+      <div>
+        <div class="teams">🇧🇷 Brasil vs 🏴 Escócia</div>
+        <div class="status">24/06/2026 • Dallas</div>
+      </div>
+    </div>
+
+    <div class="match">
+      <div>
+        <div class="teams">🇦🇷 Argentina vs 🇩🇿 Argélia</div>
+        <div class="status">16/06/2026 • Kansas City</div>
+      </div>
+    </div>
+
+    <div class="match">
+      <div>
+        <div class="teams">🏴 Inglaterra vs 🇭🇷 Croácia</div>
+        <div class="status">18/06/2026 • Miami</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="grupos" class="section">
+  <div class="card">
+    <h2>Fase de Grupos</h2>
+
+    <div class="grid">
+
+      <div class="team-card">
+        <h3>Grupo C</h3>
+        🇧🇷 Brasil<br>
+        🇲🇦 Marrocos<br>
+        🇭🇹 Haiti<br>
+        🏴 Escócia
       </div>
 
-      <div class="match">
-        <div>
-          <div class="teams">🇦🇷 Argentina vs 🇲🇽 México</div>
-          <div class="status">Terça • 16/06/2026 • 18:00</div>
-        </div>
-        <div class="score">Em breve</div>
+      <div class="team-card">
+        <h3>Grupo I</h3>
+        🇫🇷 França<br>
+        🇸🇳 Senegal<br>
+        🇮🇶 Iraque<br>
+        🇳🇴 Noruega
       </div>
 
-      <div class="match">
-        <div>
-          <div class="teams">🇫🇷 França vs 🇺🇸 Estados Unidos</div>
-          <div class="status">Quarta • 17/06/2026 • 21:00</div>
-        </div>
-        <div class="score">Em breve</div>
+      <div class="team-card">
+        <h3>Grupo J</h3>
+        🇦🇷 Argentina<br>
+        🇩🇿 Argélia<br>
+        🇦🇹 Áustria<br>
+        🇯🇴 Jordânia
       </div>
 
-      <div class="match">
-        <div>
-          <div class="teams">🏴 Inglaterra vs 🇩🇪 Alemanha</div>
-          <div class="status">Quinta • 18/06/2026 • 20:00</div>
-        </div>
-        <div class="score">Em breve</div>
-      </div>
-
-      <div class="match">
-        <div>
-          <div class="teams">🇪🇸 Espanha vs 🇵🇹 Portugal</div>
-          <div class="status">Sexta • 19/06/2026 • 22:00</div>
-        </div>
-        <div class="score">Em breve</div>
+      <div class="team-card">
+        <h3>Grupo L</h3>
+        🏴 Inglaterra<br>
+        🇭🇷 Croácia<br>
+        🇬🇭 Gana<br>
+        🇵🇦 Panamá
       </div>
 
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="proximos" class="section">
-    <div class="card">
-      <h2>Jogos das Próximas Semanas</h2>
+<section id="selecoes" class="section">
+  <div class="card">
+    <h2>Seleções</h2>
 
-      <div class="match">
-        <div>
-          <div class="teams">🇧🇷 Brasil vs 🇯🇵 Japão</div>
-          <div class="status">22/06/2026 • 17:00</div>
-        </div>
-      </div>
-
-      <div class="match">
-        <div>
-          <div class="teams">🇦🇷 Argentina vs 🇫🇷 França</div>
-          <div class="status">24/06/2026 • 21:00</div>
-        </div>
-      </div>
-
-      <div class="match">
-        <div>
-          <div class="teams">🇩🇪 Alemanha vs 🇮🇹 Itália</div>
-          <div class="status">26/06/2026 • 19:00</div>
-        </div>
-      </div>
-
-      <div class="match">
-        <div>
-          <div class="teams">🇵🇹 Portugal vs 🏴 Inglaterra</div>
-          <div class="status">28/06/2026 • 20:00</div>
-        </div>
-      </div>
-
-      <div class="match">
-        <div>
-          <div class="teams">🇲🇦 Marrocos vs 🇸🇳 Senegal</div>
-          <div class="status">30/06/2026 • 18:00</div>
-        </div>
-      </div>
-
-      <div class="match">
-        <div>
-          <div class="teams">🇺🇾 Uruguai vs 🇨🇴 Colômbia</div>
-          <div class="status">02/07/2026 • 22:00</div>
-        </div>
-      </div>
+    <div class="grid">
+      <div class="team-card" onclick="mostrarEscalacao('Brasil')">🇧🇷 Brasil</div>
+      <div class="team-card" onclick="mostrarEscalacao('Argentina')">🇦🇷 Argentina</div>
+      <div class="team-card" onclick="mostrarEscalacao('França')">🇫🇷 França</div>
+      <div class="team-card" onclick="mostrarEscalacao('Portugal')">🇵🇹 Portugal</div>
+      <div class="team-card" onclick="mostrarEscalacao('Inglaterra')">🏴 Inglaterra</div>
     </div>
-  </section>
 
-  <section id="grupos" class="section">
-    <div class="card">
-      <h2>Fase de Grupos Oficial</h2>
-
-      <div class="grid">
-
-        <div class="team-card">
-          <h3>Grupo A</h3>
-          🇺🇸 Estados Unidos<br>
-          🇲🇽 México<br>
-          🇨🇦 Canadá<br>
-          🇨🇷 Costa Rica
-        </div>
-
-        <div class="team-card">
-          <h3>Grupo B</h3>
-          🇧🇷 Brasil<br>
-          🇷🇸 Sérvia<br>
-          🇨🇭 Suíça<br>
-          🇨🇲 Camarões
-        </div>
-
-        <div class="team-card">
-          <h3>Grupo C</h3>
-          🇦🇷 Argentina<br>
-          🇵🇱 Polônia<br>
-          🇲🇽 México<br>
-          🇸🇦 Arábia Saudita
-        </div>
-
-        <div class="team-card">
-          <h3>Grupo D</h3>
-          🇫🇷 França<br>
-          🇩🇰 Dinamarca<br>
-          🇹🇳 Tunísia<br>
-          🇦🇺 Austrália
-        </div>
-
-        <div class="team-card">
-          <h3>Grupo E</h3>
-          🇪🇸 Espanha<br>
-          🇩🇪 Alemanha<br>
-          🇯🇵 Japão<br>
-          🇨🇷 Costa Rica
-        </div>
-
-        <div class="team-card">
-          <h3>Grupo F</h3>
-          🇧🇪 Bélgica<br>
-          🇭🇷 Croácia<br>
-          🇲🇦 Marrocos<br>
-          🇨🇦 Canadá
-        </div>
-
-        <div class="team-card">
-          <h3>Grupo G</h3>
-          🇵🇹 Portugal<br>
-          🇺🇾 Uruguai<br>
-          🇬🇭 Gana<br>
-          🇰🇷 Coreia do Sul
-        </div>
-
-        <div class="team-card">
-          <h3>Grupo H</h3>
-          🏴 Inglaterra<br>
-          🇳🇱 Holanda<br>
-          🇸🇳 Senegal<br>
-          🇪🇨 Equador
-        </div>
-
-      </div>
+    <div class="card" id="escalacaoBox" style="margin-top:20px; display:none;">
+      <h2 id="tituloSelecao"></h2>
+      <p id="listaJogadores"></p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="selecoes" class="section">
-    <div class="card">
-      <h2>48 Seleções</h2>
+<section id="campeoes" class="section">
+  <div class="card">
+    <h2>Últimos Campeões</h2>
 
-      <div class="grid">
-
-        <div class="team-card" onclick="mostrarEscalacao('Brasil')">🇧🇷 Brasil</div>
-        <div class="team-card" onclick="mostrarEscalacao('Argentina')">🇦🇷 Argentina</div>
-        <div class="team-card" onclick="mostrarEscalacao('França')">🇫🇷 França</div>
-        <div class="team-card" onclick="mostrarEscalacao('Alemanha')">🇩🇪 Alemanha</div>
-        <div class="team-card" onclick="mostrarEscalacao('Portugal')">🇵🇹 Portugal</div>
-        <div class="team-card" onclick="mostrarEscalacao('Espanha')">🇪🇸 Espanha</div>
-        <div class="team-card" onclick="mostrarEscalacao('Inglaterra')">🏴 Inglaterra</div>
-        <div class="team-card" onclick="mostrarEscalacao('Itália')">🇮🇹 Itália</div>
-
-      </div>
-
-      <div class="card" id="escalacaoBox" style="margin-top:20px; display:none;">
-        <h2 id="tituloSelecao"></h2>
-        <p id="listaJogadores"></p>
-      </div>
+    <div class="match">
+      <div class="teams">🇦🇷 Argentina</div>
+      <div class="score">2022</div>
     </div>
-  </section>
 
-  <section id="campeoes" class="section">
-    <div class="card">
-      <h2>Últimos Campeões da Copa do Mundo</h2>
-
-      <div class="match">
-        <div class="teams">🇦🇷 Argentina</div>
-        <div class="score">2022</div>
-      </div>
-
-      <div class="match">
-        <div class="teams">🇫🇷 França</div>
-        <div class="score">2018</div>
-      </div>
-
-      <div class="match">
-        <div class="teams">🇩🇪 Alemanha</div>
-        <div class="score">2014</div>
-      </div>
-
-      <div class="match">
-        <div class="teams">🇪🇸 Espanha</div>
-        <div class="score">2010</div>
-      </div>
-
-      <div class="match">
-        <div class="teams">🇮🇹 Itália</div>
-        <div class="score">2006</div>
-      </div>
-
-      <div class="match">
-        <div class="teams">🇧🇷 Brasil</div>
-        <div class="score">2002</div>
-      </div>
+    <div class="match">
+      <div class="teams">🇫🇷 França</div>
+      <div class="score">2018</div>
     </div>
-  </section>
 
-  <section id="apostas" class="section">
-    <div class="card">
-      <h2>Faça Sua Aposta</h2>
-
-      <div class="bet-box">
-        <label>Escolha o jogo</label>
-        <select id="jogo">
-          <option>Brasil vs Argentina</option>
-          <option>França vs Alemanha</option>
-          <option>Portugal vs Espanha</option>
-          <option>Inglaterra vs Itália</option>
-        </select>
-
-        <label>Seu palpite</label>
-        <input type="text" id="palpite" placeholder="Ex: 2x1 Brasil" />
-
-        <label>Seu nome</label>
-        <input type="text" id="nome" placeholder="Digite seu nome" />
-
-        <button class="btn" onclick="salvarAposta()">Salvar Aposta</button>
-
-        <div class="bet-history" id="historico"></div>
-      </div>
+    <div class="match">
+      <div class="teams">🇩🇪 Alemanha</div>
+      <div class="score">2014</div>
     </div>
-  </section>
+
+  </div>
+</section>
+
+<section id="apostas" class="section">
+  <div class="card">
+    <h2>Faça Sua Aposta</h2>
+
+    <div class="bet-box">
+
+      <label>Escolha o jogo</label>
+      <select id="jogo">
+        <option>Brasil vs Marrocos</option>
+        <option>Argentina vs Argélia</option>
+        <option>França vs Senegal</option>
+      </select>
+
+      <label>Seu palpite</label>
+      <input type="text" id="palpite" placeholder="Ex: 2x1 Brasil" />
+
+      <label>Seu nome</label>
+      <input type="text" id="nome" placeholder="Digite seu nome" />
+
+      <button class="btn" onclick="salvarAposta()">Salvar Aposta</button>
+
+      <div class="bet-history" id="historico"></div>
+
+    </div>
+  </div>
+</section>
 
 </div>
 
 <footer>
-  Desenvolvido para GitHub Pages • FlashScore Style • Copa do Mundo 2026
+  Site Copa do Mundo 2026 • GitHub Pages • FlashScore Style
 </footer>
 
 <script>
 
-  function showSection(sectionId) {
-    const sections = document.querySelectorAll('.section');
+function showSection(sectionId) {
+  const sections = document.querySelectorAll('.section');
 
-    sections.forEach(section => {
-      section.classList.remove('active');
-    });
+  sections.forEach(section => {
+    section.classList.remove('active');
+  });
 
-    document.getElementById(sectionId).classList.add('active');
+  document.getElementById(sectionId).classList.add('active');
+}
+
+function salvarAposta() {
+
+  const jogo = document.getElementById('jogo').value;
+  const palpite = document.getElementById('palpite').value;
+  const nome = document.getElementById('nome').value;
+
+  if(nome === '' || palpite === '') {
+    alert('Preencha todos os campos!');
+    return;
   }
 
-  function salvarAposta() {
-    const jogo = document.getElementById('jogo').value;
-    const palpite = document.getElementById('palpite').value;
-    const nome = document.getElementById('nome').value;
+  const aposta = {
+    jogo,
+    palpite,
+    nome
+  };
 
-    if(nome === '' || palpite === '') {
-      alert('Preencha todos os campos!');
-      return;
-    }
+  let apostas = JSON.parse(localStorage.getItem('apostas')) || [];
 
-    const aposta = {
-      jogo,
-      palpite,
-      nome
-    };
+  apostas.push(aposta);
 
-    let apostas = JSON.parse(localStorage.getItem('apostas')) || [];
-
-    apostas.push(aposta);
-
-    localStorage.setItem('apostas', JSON.stringify(apostas));
-
-    mostrarApostas();
-
-  function mostrarEscalacao(time) {
-
-    const escalacoes = {
-      'Brasil': 'Alisson, Danilo, Marquinhos, Militão, Wendell, Casemiro, Paquetá, Bruno Guimarães, Vinicius Jr, Rodrygo e Endrick.',
-
-      'Argentina': 'Martínez, Molina, Romero, Otamendi, Acuña, De Paul, Mac Allister, Enzo Fernández, Messi, Julián Álvarez e Di María.',
-
-      'França': 'Maignan, Koundé, Upamecano, Saliba, Theo Hernández, Tchouaméni, Camavinga, Griezmann, Dembélé, Mbappé e Giroud.',
-
-      'Alemanha': 'Neuer, Kimmich, Rudiger, Tah, Raum, Goretzka, Gundogan, Musiala, Sané, Wirtz e Havertz.',
-
-      'Portugal': 'Diogo Costa, Cancelo, Pepe, Rúben Dias, Nuno Mendes, Bruno Fernandes, Bernardo Silva, Vitinha, Rafael Leão, Cristiano Ronaldo e João Félix.',
-
-      'Espanha': 'Simón, Carvajal, Laporte, Pau Cubarsí, Balde, Pedri, Rodri, Gavi, Yamal, Morata e Nico Williams.',
-
-      'Inglaterra': 'Pickford, Walker, Stones, Maguire, Shaw, Rice, Bellingham, Foden, Saka, Kane e Grealish.',
-
-      'Itália': 'Donnarumma, Di Lorenzo, Bastoni, Acerbi, Dimarco, Barella, Jorginho, Pellegrini, Chiesa, Scamacca e Raspadori.'
-    };
-
-    document.getElementById('escalacaoBox').style.display = 'block';
-    document.getElementById('tituloSelecao').innerText = 'Escalação - ' + time;
-    document.getElementById('listaJogadores').innerText = escalacoes[time];
-  }
-
-    document.getElementById('palpite').value = '';
-    document.getElementById('nome').value = '';
-  }
-
-  function mostrarApostas() {
-    const historico = document.getElementById('historico');
-
-    let apostas = JSON.parse(localStorage.getItem('apostas')) || [];
-
-    historico.innerHTML = '';
-
-    apostas.forEach(aposta => {
-      historico.innerHTML += `
-        <div class="bet-item">
-          <strong>${aposta.nome}</strong><br>
-          Jogo: ${aposta.jogo}<br>
-          Palpite: ${aposta.palpite}
-        </div>
-      `;
-    });
-  }
+  localStorage.setItem('apostas', JSON.stringify(apostas));
 
   mostrarApostas();
+
+  document.getElementById('palpite').value = '';
+  document.getElementById('nome').value = '';
+}
+
+function mostrarApostas() {
+
+  const historico = document.getElementById('historico');
+
+  let apostas = JSON.parse(localStorage.getItem('apostas')) || [];
+
+  historico.innerHTML = '';
+
+  apostas.forEach(aposta => {
+
+    historico.innerHTML += `
+      <div class="bet-item">
+        <strong>${aposta.nome}</strong><br>
+        Jogo: ${aposta.jogo}<br>
+        Palpite: ${aposta.palpite}
+      </div>
+    `;
+
+  });
+}
+
+function mostrarEscalacao(time) {
+
+  const escalacoes = {
+
+    'Brasil': 'Alisson, Danilo, Marquinhos, Militão, Casemiro, Bruno Guimarães, Rodrygo, Vinicius Jr e Endrick.',
+
+    'Argentina': 'Martínez, Romero, Otamendi, De Paul, Enzo Fernández, Messi e Julián Álvarez.',
+
+    'França': 'Maignan, Koundé, Saliba, Theo Hernández, Camavinga, Dembélé e Mbappé.',
+
+    'Portugal': 'Diogo Costa, Rúben Dias, Bruno Fernandes, Bernardo Silva, Rafael Leão e Cristiano Ronaldo.',
+
+    'Inglaterra': 'Pickford, Stones, Rice, Bellingham, Foden, Saka e Kane.'
+  };
+
+  document.getElementById('escalacaoBox').style.display = 'block';
+  document.getElementById('tituloSelecao').innerText = 'Escalação - ' + time;
+  document.getElementById('listaJogadores').innerText = escalacoes[time];
+}
+
+mostrarApostas();
 
 </script>
 
