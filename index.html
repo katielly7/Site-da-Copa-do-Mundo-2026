@@ -2,19 +2,22 @@
 <html lang="pt-BR">
 
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Copa do Mundo 2026 | FlashScore Brasil</title>
+<title>Copa do Mundo FIFA 2026 | FlashScore Brasil</title>
 
 <link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
@@ -23,14 +26,17 @@
 <header class="top-header">
 
 <div class="logo-area">
+
 <i class="fa-solid fa-trophy"></i>
-<h1>Copa do Mundo 2026</h1>
+
+<div>
+
+<h1>Copa do Mundo FIFA 2026</h1>
+
+<p>Estados Unidos 🇺🇸 • Canadá 🇨🇦 • México 🇲🇽</p>
+
 </div>
 
-<div class="host-countries">
-<span>🇺🇸 Estados Unidos</span>
-<span>🇨🇦 Canadá</span>
-<span>🇲🇽 México</span>
 </div>
 
 </header>
@@ -47,11 +53,6 @@ Início
 Jogos
 </button>
 
-<button onclick="showSection('classificacao')">
-<i class="fa-solid fa-ranking-star"></i>
-Classificação
-</button>
-
 <button onclick="showSection('selecoes')">
 <i class="fa-solid fa-flag"></i>
 Seleções
@@ -60,6 +61,11 @@ Seleções
 <button onclick="showSection('estadios')">
 <i class="fa-solid fa-building"></i>
 Estádios
+</button>
+
+<button onclick="showSection('grupos')">
+<i class="fa-solid fa-users"></i>
+Grupos
 </button>
 
 <button onclick="showSection('campeoes')">
@@ -74,7 +80,7 @@ Estatísticas
 
 <button onclick="showSection('apostas')">
 <i class="fa-solid fa-money-bill-wave"></i>
-Apostas
+Palpites
 </button>
 
 </nav>
@@ -85,12 +91,18 @@ Apostas
 
 <div class="hero-card">
 
-<h2>⚽ Copa do Mundo FIFA 2026</h2>
+<h2>🏆 Copa do Mundo FIFA 2026</h2>
 
 <p>
-A maior Copa da história com 48 seleções,
-104 partidas e sedes espalhadas pelos
+
+A Copa do Mundo FIFA 2026 será realizada entre
+11 de junho e 19 de julho de 2026.
+
+Será a primeira edição com
+48 seleções e 104 partidas,
+disputada em três países:
 Estados Unidos, Canadá e México.
+
 </p>
 
 </div>
@@ -98,73 +110,91 @@ Estados Unidos, Canadá e México.
 <div class="cards-grid">
 
 <div class="info-card">
+
 <h3>🌎 Seleções</h3>
+
 <p>48 participantes</p>
+
 </div>
 
 <div class="info-card">
+
 <h3>⚽ Jogos</h3>
+
 <p>104 partidas</p>
+
 </div>
 
 <div class="info-card">
+
 <h3>🏟️ Estádios</h3>
+
 <p>16 sedes oficiais</p>
+
 </div>
 
 <div class="info-card">
+
 <h3>🏆 Campeão Atual</h3>
+
 <p>Argentina 🇦🇷</p>
+
 </div>
 
 </div>
 
 <div class="next-match">
 
-<h2>🔥 Próximos Grandes Jogos</h2>
+<h2>🔥 Informações Oficiais</h2>
 
 <div class="matches-grid">
 
 <div class="match-card">
-<h3>🇲🇽 México vs 🇨🇭 Suíça</h3>
-<p>📅 11/06/2026</p>
+
+<div class="match-header">
+
+📅 Abertura
+
+</div>
+
+<h3>11/06/2026</h3>
+
 <p>🏟️ Estádio Azteca</p>
-<p>🏆 Grupo A</p>
+
+<p>📍 Cidade do México</p>
+
 </div>
 
 <div class="match-card">
-<h3>🇨🇦 Canadá vs 🇿🇦 África do Sul</h3>
-<p>📅 11/06/2026</p>
-<p>🏟️ Toronto Stadium</p>
-<p>🏆 Grupo A</p>
+
+<div class="match-header">
+
+🏆 Final
+
+</div>
+
+<h3>19/07/2026</h3>
+
+<p>🏟️ MetLife Stadium</p>
+
+<p>📍 Nova Jersey</p>
+
 </div>
 
 <div class="match-card">
-<h3>🇧🇷 Brasil vs 🏴 Escócia</h3>
-<p>📅 12/06/2026</p>
-<p>🏟️ Philadelphia Stadium</p>
-<p>🏆 Grupo C</p>
+
+<div class="match-header">
+
+🌎 Países-sede
+
 </div>
 
-<div class="match-card">
-<h3>🇲🇦 Marrocos vs 🇭🇹 Haiti</h3>
-<p>📅 12/06/2026</p>
-<p>🏟️ Boston Stadium</p>
-<p>🏆 Grupo C</p>
-</div>
+<p>🇺🇸 Estados Unidos</p>
 
-<div class="match-card">
-<h3>🇺🇸 Estados Unidos vs 🇦🇺 Austrália</h3>
-<p>📅 13/06/2026</p>
-<p>🏟️ Seattle Stadium</p>
-<p>🏆 Grupo D</p>
-</div>
+<p>🇨🇦 Canadá</p>
 
-<div class="match-card">
-<h3>🇩🇪 Alemanha vs 🇨🇮 Costa do Marfim</h3>
-<p>📅 13/06/2026</p>
-<p>🏟️ Toronto Stadium</p>
-<p>🏆 Grupo E</p>
+<p>🇲🇽 México</p>
+
 </div>
 
 </div>
@@ -172,547 +202,170 @@ Estados Unidos, Canadá e México.
 </div>
 
 </section>
-
 <section id="jogos" class="section">
 
 <h2 class="section-title">
-📅 Jogos da Copa do Mundo 2026
+📅 Jogos da Copa do Mundo FIFA 2026
 </h2>
+
+<div class="hero-card">
+
+<h2>Calendário Oficial</h2>
+
+<p>
+
+A Copa do Mundo FIFA 2026 terá
+104 partidas entre
+11 de junho e 19 de julho de 2026.
+
+Os confrontos da fase de grupos,
+datas, horários e estádios serão
+atualizados conforme a tabela oficial
+da FIFA.
+
+</p>
+
+</div>
 
 <div class="matches-grid">
 
-<!-- GRUPO A -->
-
 <div class="match-card">
-<div class="match-header">Grupo A</div>
+
+<div class="match-header">
+🏆 Abertura
+</div>
 
 <div class="teams-row">
+
 <span>🇲🇽 México</span>
+
 <span class="vs">VS</span>
-<span>🇨🇭 Suíça</span>
+
+<span>A definir</span>
+
 </div>
 
 <div class="match-info">
 📅 11/06/2026
+</div>
+
+<div class="match-info">
+🕒 Horário oficial a confirmar
 </div>
 
 <div class="match-info">
 🏟️ Estádio Azteca
 </div>
+
+<div class="match-info">
+📍 Cidade do México
+</div>
+
 </div>
 
 <div class="match-card">
-<div class="match-header">Grupo A</div>
 
-<div class="teams-row">
-<span>🇨🇦 Canadá</span>
-<span class="vs">VS</span>
-<span>🇿🇦 África do Sul</span>
+<div class="match-header">
+⚽ Fase de Grupos
 </div>
 
-<div class="match-info">
-📅 11/06/2026
-</div>
+<p>
 
-<div class="match-info">
-🏟️ Toronto Stadium
-</div>
+48 seleções disputarão
+72 partidas na fase de grupos.
+
+</p>
+
 </div>
 
 <div class="match-card">
-<div class="match-header">Grupo A</div>
 
-<div class="teams-row">
-<span>🇲🇽 México</span>
-<span class="vs">VS</span>
-<span>🇿🇦 África do Sul</span>
+<div class="match-header">
+🏅 Mata-mata
 </div>
 
-<div class="match-info">
-📅 16/06/2026
-</div>
+<p>
 
-<div class="match-info">
-🏟️ Guadalajara Stadium
-</div>
-</div>
+A partir desta edição,
+a Copa contará com
+16 avos de final.
 
-<div class="match-card">
-<div class="match-header">Grupo A</div>
+</p>
 
-<div class="teams-row">
-<span>🇨🇦 Canadá</span>
-<span class="vs">VS</span>
-<span>🇨🇭 Suíça</span>
-</div>
-
-<div class="match-info">
-📅 16/06/2026
-</div>
-
-<div class="match-info">
-🏟️ Vancouver Stadium
-</div>
-</div>
-<!-- GRUPO B -->
-
-<div class="match-card">
-<div class="match-header">Grupo B</div>
-
-<div class="teams-row">
-<span>🇦🇷 Argentina</span>
-<span class="vs">VS</span>
-<span>🇯🇵 Japão</span>
-</div>
-
-<div class="match-info">
-📅 12/06/2026
-</div>
-
-<div class="match-info">
-🏟️ SoFi Stadium
-</div>
 </div>
 
 <div class="match-card">
-<div class="match-header">Grupo B</div>
+
+<div class="match-header">
+🏆 Final
+</div>
 
 <div class="teams-row">
-<span>🇫🇷 França</span>
+
+<span>A definir</span>
+
 <span class="vs">VS</span>
-<span>🇨🇴 Colômbia</span>
+
+<span>A definir</span>
+
 </div>
 
 <div class="match-info">
-📅 12/06/2026
+📅 19/07/2026
 </div>
 
 <div class="match-info">
-🏟️ AT&T Stadium
-</div>
-</div>
-
-<div class="match-card">
-<div class="match-header">Grupo B</div>
-
-<div class="teams-row">
-<span>🇦🇷 Argentina</span>
-<span class="vs">VS</span>
-<span>🇨🇴 Colômbia</span>
+🕒 Horário oficial a confirmar
 </div>
 
 <div class="match-info">
-📅 17/06/2026
+🏟️ MetLife Stadium
 </div>
 
 <div class="match-info">
-🏟️ Dallas Stadium
+📍 Nova Jersey
 </div>
-</div>
-
-<div class="match-card">
-<div class="match-header">Grupo B</div>
-
-<div class="teams-row">
-<span>🇫🇷 França</span>
-<span class="vs">VS</span>
-<span>🇯🇵 Japão</span>
-</div>
-
-<div class="match-info">
-📅 17/06/2026
-</div>
-
-<div class="match-info">
-🏟️ Atlanta Stadium
-</div>
-</div>
-
-<!-- GRUPO C -->
-
-<div class="match-card">
-<div class="match-header">Grupo C</div>
-
-<div class="teams-row">
-<span>🇧🇷 Brasil</span>
-<span class="vs">VS</span>
-<span>🏴 Escócia</span>
-</div>
-
-<div class="match-info">
-📅 12/06/2026
-</div>
-
-<div class="match-info">
-🏟️ Philadelphia Stadium
-</div>
-</div>
-
-<div class="match-card">
-<div class="match-header">Grupo C</div>
-
-<div class="teams-row">
-<span>🇲🇦 Marrocos</span>
-<span class="vs">VS</span>
-<span>🇭🇹 Haiti</span>
-</div>
-
-<div class="match-info">
-📅 12/06/2026
-</div>
-
-<div class="match-info">
-🏟️ Boston Stadium
-</div>
-</div>
-
-<div class="match-card">
-<div class="match-header">Grupo C</div>
-
-<div class="teams-row">
-<span>🇧🇷 Brasil</span>
-<span class="vs">VS</span>
-<span>🇭🇹 Haiti</span>
-</div>
-
-<div class="match-info">
-📅 19/06/2026
-</div>
-
-<div class="match-info">
-🏟️ Philadelphia Stadium
-</div>
-</div>
-
-<div class="match-card">
-<div class="match-header">Grupo C</div>
-
-<div class="teams-row">
-<span>🏴 Escócia</span>
-<span class="vs">VS</span>
-<span>🇲🇦 Marrocos</span>
-</div>
-
-<div class="match-info">
-📅 19/06/2026
-</div>
-
-<div class="match-info">
-🏟️ Boston Stadium
-</div>
-</div>
-
-<!-- GRUPO D -->
-
-<div class="match-card">
-<div class="match-header">Grupo D</div>
-
-<div class="teams-row">
-<span>🇺🇸 Estados Unidos</span>
-<span class="vs">VS</span>
-<span>🇦🇺 Austrália</span>
-</div>
-
-<div class="match-info">
-📅 13/06/2026
-</div>
-
-<div class="match-info">
-🏟️ Seattle Stadium
-</div>
-</div>
-
-<div class="match-card">
-<div class="match-header">Grupo D</div>
-
-<div class="teams-row">
-<span>🇺🇾 Uruguai</span>
-<span class="vs">VS</span>
-<span>🇰🇷 Coreia do Sul</span>
-</div>
-
-<div class="match-info">
-📅 13/06/2026
-</div>
-
-<div class="match-info">
-🏟️ Kansas City Stadium
-</div>
-</div>
-
-<!-- GRUPO E -->
-
-<div class="match-card">
-<div class="match-header">Grupo E</div>
-
-<div class="teams-row">
-<span>🇩🇪 Alemanha</span>
-<span class="vs">VS</span>
-<span>🇨🇮 Costa do Marfim</span>
-</div>
-
-<div class="match-info">
-📅 13/06/2026
-</div>
-
-<div class="match-info">
-🏟️ Toronto Stadium
-</div>
-</div>
-
-<div class="match-card">
-<div class="match-header">Grupo E</div>
-
-<div class="teams-row">
-<span>🇵🇹 Portugal</span>
-<span class="vs">VS</span>
-<span>🇪🇬 Egito</span>
-</div>
-
-<div class="match-info">
-📅 13/06/2026
-</div>
-
-<div class="match-info">
-🏟️ Miami Stadium
-</div>
-</div>
-<!-- GRUPO F -->
-
-<div class="match-card">
-<div class="match-header">Grupo F</div>
-
-<div class="teams-row">
-<span>🇳🇱 Holanda</span>
-<span class="vs">VS</span>
-<span>🇸🇪 Suécia</span>
-</div>
-
-<div class="match-info">
-📅 20/06/2026
-</div>
-
-<div class="match-info">
-🏟️ Houston Stadium
-</div>
-</div>
-
-<div class="match-card">
-<div class="match-header">Grupo F</div>
-
-<div class="teams-row">
-<span>🏴 Inglaterra</span>
-<span class="vs">VS</span>
-<span>🇨🇭 Suíça</span>
-</div>
 
-<div class="match-info">
-📅 20/06/2026
 </div>
 
-<div class="match-info">
-🏟️ New York Stadium
-</div>
-</div>
-
-<!-- GRUPO G -->
-
-<div class="match-card">
-<div class="match-header">Grupo G</div>
-
-<div class="teams-row">
-<span>🇧🇪 Bélgica</span>
-<span class="vs">VS</span>
-<span>🇮🇷 Irã</span>
-</div>
-
-<div class="match-info">
-📅 21/06/2026
-</div>
-
-<div class="match-info">
-🏟️ Los Angeles Stadium
-</div>
-</div>
-
-<div class="match-card">
-<div class="match-header">Grupo G</div>
-
-<div class="teams-row">
-<span>🇮🇹 Itália</span>
-<span class="vs">VS</span>
-<span>🇳🇬 Nigéria</span>
-</div>
-
-<div class="match-info">
-📅 21/06/2026
-</div>
-
-<div class="match-info">
-🏟️ San Francisco Stadium
-</div>
-</div>
-
-<!-- GRUPO H -->
-
-<div class="match-card">
-<div class="match-header">Grupo H</div>
-
-<div class="teams-row">
-<span>🇪🇸 Espanha</span>
-<span class="vs">VS</span>
-<span>🇸🇦 Arábia Saudita</span>
-</div>
-
-<div class="match-info">
-📅 21/06/2026
-</div>
-
-<div class="match-info">
-🏟️ Atlanta Stadium
-</div>
-</div>
-
-<div class="match-card">
-<div class="match-header">Grupo H</div>
-
-<div class="teams-row">
-<span>🇺🇾 Uruguai</span>
-<span class="vs">VS</span>
-<span>🇪🇸 Espanha</span>
-</div>
-
-<div class="match-info">
-📅 26/06/2026
-</div>
-
-<div class="match-info">
-🏟️ Guadalajara Stadium
-</div>
-</div>
-
-<!-- GRUPO I -->
-
-<div class="match-card">
-<div class="match-header">Grupo I</div>
-
-<div class="teams-row">
-<span>🇫🇷 França</span>
-<span class="vs">VS</span>
-<span>🇮🇶 Iraque</span>
-</div>
-
-<div class="match-info">
-📅 22/06/2026
-</div>
-
-<div class="match-info">
-🏟️ Philadelphia Stadium
-</div>
-</div>
-
-<div class="match-card">
-<div class="match-header">Grupo I</div>
-
-<div class="teams-row">
-<span>🇨🇴 Colômbia</span>
-<span class="vs">VS</span>
-<span>🇨🇱 Chile</span>
-</div>
-
-<div class="match-info">
-📅 22/06/2026
-</div>
-
-<div class="match-info">
-🏟️ Dallas Stadium
-</div>
-</div>
-
-<!-- GRUPO J -->
-
-<div class="match-card">
-<div class="match-header">Grupo J</div>
-
-<div class="teams-row">
-<span>🇦🇷 Argentina</span>
-<span class="vs">VS</span>
-<span>🇦🇹 Áustria</span>
-</div>
-
-<div class="match-info">
-📅 22/06/2026
-</div>
-
-<div class="match-info">
-🏟️ Dallas Stadium
-</div>
-</div>
-
-<div class="match-card">
-<div class="match-header">Grupo J</div>
-
-<div class="teams-row">
-<span>🇯🇵 Japão</span>
-<span class="vs">VS</span>
-<span>🇰🇷 Coreia do Sul</span>
-</div>
-
-<div class="match-info">
-📅 22/06/2026
-</div>
-
-<div class="match-info">
-🏟️ Vancouver Stadium
-</div>
-</div>
-
-<!-- RODADA FINAL DOS GRUPOS -->
-
-<div class="match-card">
-<div class="match-header">24/06 • Grupo C</div>
-
-<div class="teams-row">
-<span>🇧🇷 Brasil</span>
-<span class="vs">VS</span>
-<span>🏴 Escócia</span>
-</div>
-
-<div class="match-info">
-🕒 20:00
-</div>
-
-<div class="match-info">
-🏟️ Miami Stadium
-</div>
-</div>
-
-<div class="match-card">
-<div class="match-header">24/06 • Grupo C</div>
-
-<div class="teams-row">
-<span>🇲🇦 Marrocos</span>
-<span class="vs">VS</span>
-<span>🇭🇹 Haiti</span>
-</div>
-
-<div class="match-info">
-🕒 20:00
-</div>
-
-<div class="match-info">
-🏟️ Atlanta Stadium
-</div>
-</div>
 </div>
 
 </section>
-
-<section id="classificacao" class="section">
+<section id="selecoes" class="section">
 
 <h2 class="section-title">
-📊 Classificação
+🌎 Seleções
 </h2>
+
+<div class="hero-card">
+
+<h2>🏆 Copa do Mundo FIFA 2026</h2>
+
+<p>
+
+Nesta página serão exibidas as 48 seleções
+participantes da Copa do Mundo FIFA 2026,
+em ordem alfabética, com suas respectivas
+bandeiras.
+
+</p>
+
+</div>
+
+<div class="teams-grid">
+
+<!-- As seleções serão adicionadas aqui na próxima parte -->
+
+</div>
+
+</section>
+<section id="grupos" class="section">
+
+<h2 class="section-title">
+📊 Grupos da Copa do Mundo FIFA 2026
+</h2>
+
+<div class="cards-grid">
 
 <div class="group-table">
 
@@ -721,44 +374,32 @@ Estados Unidos, Canadá e México.
 <table>
 
 <tr>
-<th>#</th>
 <th>Seleção</th>
-<th>PTS</th>
-<th>PJ</th>
-<th>SG</th>
 </tr>
 
-<tr>
-<td>1</td>
-<td>🇲🇽 México</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
+<tr><td>🇲🇽 México</td></tr>
+<tr><td>🇿🇦 África do Sul</td></tr>
+<tr><td>🇰🇷 Coreia do Sul</td></tr>
+<tr><td>🏳️ Vencedor da Repescagem Europeia D</td></tr>
+
+</table>
+
+</div>
+
+<div class="group-table">
+
+<h3>Grupo B</h3>
+
+<table>
 
 <tr>
-<td>2</td>
-<td>🇨🇦 Canadá</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
+<th>Seleção</th>
 </tr>
 
-<tr>
-<td>3</td>
-<td>🇨🇭 Suíça</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-
-<tr>
-<td>4</td>
-<td>🇿🇦 África do Sul</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
+<tr><td>🇨🇦 Canadá</td></tr>
+<tr><td>🏳️ Vencedor da Repescagem Europeia A</td></tr>
+<tr><td>🇶🇦 Catar</td></tr>
+<tr><td>🇨🇭 Suíça</td></tr>
 
 </table>
 
@@ -771,108 +412,36 @@ Estados Unidos, Canadá e México.
 <table>
 
 <tr>
-<th>#</th>
 <th>Seleção</th>
-<th>PTS</th>
-<th>PJ</th>
-<th>SG</th>
 </tr>
 
-<tr>
-<td>1</td>
-<td>🇧🇷 Brasil</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-
-<tr>
-<td>2</td>
-<td>🏴 Escócia</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-
-<tr>
-<td>3</td>
-<td>🇲🇦 Marrocos</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-
-<tr>
-<td>4</td>
-<td>🇭🇹 Haiti</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
+<tr><td>🇧🇷 Brasil</td></tr>
+<tr><td>🇲🇦 Marrocos</td></tr>
+<tr><td>🇭🇹 Haiti</td></tr>
+<tr><td>🏴 Escócia</td></tr>
 
 </table>
 
 </div>
 
-</section>
+<div class="group-table">
 
-<section id="selecoes" class="section">
+<h3>Grupo D</h3>
 
-<h2 class="section-title">
-🌎 Seleções Participantes
-</h2>
+<table>
 
-<div class="teams-grid">
+<tr>
+<th>Seleção</th>
+</tr>
 
-<div class="team-card">🇦🇷 Argentina</div>
-<div class="team-card">🇦🇺 Austrália</div>
-<div class="team-card">🇦🇹 Áustria</div>
-<div class="team-card">🇧🇪 Bélgica</div>
-<div class="team-card">🇧🇷 Brasil</div>
-<div class="team-card">🇨🇦 Canadá</div>
-<div class="team-card">🇨🇴 Colômbia</div>
-<div class="team-card">🇰🇷 Coreia do Sul</div>
-<div class="team-card">🇨🇷 Costa Rica</div>
-<div class="team-card">🇨🇮 Costa do Marfim</div>
-<div class="team-card">🇭🇷 Croácia</div>
-<div class="team-card">🇩🇰 Dinamarca</div>
-<div class="team-card">🇪🇨 Equador</div>
-<div class="team-card">🇪🇬 Egito</div>
-<div class="team-card">🇸🇰 Eslováquia</div>
-<div class="team-card">🇸🇮 Eslovênia</div>
-<div class="team-card">🇪🇸 Espanha</div>
-<div class="team-card">🇺🇸 Estados Unidos</div>
-<div class="team-card">🇫🇮 Finlândia</div>
-<div class="team-card">🇫🇷 França</div>
-<div class="team-card">🇩🇪 Alemanha</div>
-<div class="team-card">🇬🇭 Gana</div>
-<div class="team-card">🇬🇷 Grécia</div>
-<div class="team-card">🇳🇱 Holanda</div>
-<div class="team-card">🇭🇳 Honduras</div>
-<div class="team-card">🏴 Inglaterra</div>
-<div class="team-card">🇮🇷 Irã</div>
-<div class="team-card">🇮🇹 Itália</div>
-<div class="team-card">🇯🇵 Japão</div>
-<div class="team-card">🇲🇦 Marrocos</div>
-<div class="team-card">🇲🇽 México</div>
-<div class="team-card">🇳🇬 Nigéria</div>
-<div class="team-card">🇳🇿 Nova Zelândia</div>
-<div class="team-card">🇵🇦 Panamá</div>
-<div class="team-card">🇵🇾 Paraguai</div>
-<div class="team-card">🇵🇪 Peru</div>
-<div class="team-card">🇵🇱 Polônia</div>
-<div class="team-card">🇵🇹 Portugal</div>
-<div class="team-card">🇶🇦 Catar</div>
-<div class="team-card">🇨🇿 República Tcheca</div>
-<div class="team-card">🇷🇴 Romênia</div>
-<div class="team-card">🇸🇦 Arábia Saudita</div>
-<div class="team-card">🇸🇳 Senegal</div>
-<div class="team-card">🇷🇸 Sérvia</div>
-<div class="team-card">🇸🇪 Suécia</div>
-<div class="team-card">🇨🇭 Suíça</div>
-<div class="team-card">🇹🇳 Tunísia</div>
-<div class="team-card">🇺🇦 Ucrânia</div>
-<div class="team-card">🇺🇾 Uruguai</div>
+<tr><td>🇺🇸 Estados Unidos</td></tr>
+<tr><td>🇵🇾 Paraguai</td></tr>
+<tr><td>🇦🇺 Austrália</td></tr>
+<tr><td>🏳️ Vencedor da Repescagem Europeia C</td></tr>
+
+</table>
+
+</div>
 
 </div>
 
@@ -880,49 +449,89 @@ Estados Unidos, Canadá e México.
 <section id="estadios" class="section">
 
 <h2 class="section-title">
-🏟️ Estádios da Copa 2026
+🏟️ Estádios Oficiais da Copa do Mundo FIFA 2026
 </h2>
 
 <div class="stadium-grid">
 
 <div class="stadium-card">
 <h3>🏟️ Estádio Azteca</h3>
-<p>Cidade do México - México</p>
+<p>📍 Cidade do México - México 🇲🇽</p>
 </div>
 
 <div class="stadium-card">
-<h3>🏟️ SoFi Stadium</h3>
-<p>Los Angeles - EUA</p>
+<h3>🏟️ Estadio BBVA</h3>
+<p>📍 Monterrey - México 🇲🇽</p>
 </div>
 
 <div class="stadium-card">
-<h3>🏟️ MetLife Stadium</h3>
-<p>Nova Jersey - EUA</p>
-</div>
-
-<div class="stadium-card">
-<h3>🏟️ AT&T Stadium</h3>
-<p>Dallas - EUA</p>
-</div>
-
-<div class="stadium-card">
-<h3>🏟️ Hard Rock Stadium</h3>
-<p>Miami - EUA</p>
+<h3>🏟️ Estadio Akron</h3>
+<p>📍 Guadalajara - México 🇲🇽</p>
 </div>
 
 <div class="stadium-card">
 <h3>🏟️ BMO Field</h3>
-<p>Toronto - Canadá</p>
+<p>📍 Toronto - Canadá 🇨🇦</p>
+</div>
+
+<div class="stadium-card">
+<h3>🏟️ BC Place</h3>
+<p>📍 Vancouver - Canadá 🇨🇦</p>
+</div>
+
+<div class="stadium-card">
+<h3>🏟️ MetLife Stadium</h3>
+<p>📍 Nova Jersey - Estados Unidos 🇺🇸</p>
 </div>
 
 <div class="stadium-card">
 <h3>🏟️ Mercedes-Benz Stadium</h3>
-<p>Atlanta - EUA</p>
+<p>📍 Atlanta - Estados Unidos 🇺🇸</p>
+</div>
+
+<div class="stadium-card">
+<h3>🏟️ AT&T Stadium</h3>
+<p>📍 Dallas - Estados Unidos 🇺🇸</p>
 </div>
 
 <div class="stadium-card">
 <h3>🏟️ NRG Stadium</h3>
-<p>Houston - EUA</p>
+<p>📍 Houston - Estados Unidos 🇺🇸</p>
+</div>
+
+<div class="stadium-card">
+<h3>🏟️ Arrowhead Stadium</h3>
+<p>📍 Kansas City - Estados Unidos 🇺🇸</p>
+</div>
+
+<div class="stadium-card">
+<h3>🏟️ SoFi Stadium</h3>
+<p>📍 Los Angeles - Estados Unidos 🇺🇸</p>
+</div>
+
+<div class="stadium-card">
+<h3>🏟️ Hard Rock Stadium</h3>
+<p>📍 Miami - Estados Unidos 🇺🇸</p>
+</div>
+
+<div class="stadium-card">
+<h3>🏟️ Lincoln Financial Field</h3>
+<p>📍 Filadélfia - Estados Unidos 🇺🇸</p>
+</div>
+
+<div class="stadium-card">
+<h3>🏟️ Lumen Field</h3>
+<p>📍 Seattle - Estados Unidos 🇺🇸</p>
+</div>
+
+<div class="stadium-card">
+<h3>🏟️ Levi's Stadium</h3>
+<p>📍 Santa Clara (São Francisco) - Estados Unidos 🇺🇸</p>
+</div>
+
+<div class="stadium-card">
+<h3>🏟️ Gillette Stadium</h3>
+<p>📍 Foxborough (Boston) - Estados Unidos 🇺🇸</p>
 </div>
 
 </div>
@@ -962,7 +571,7 @@ Estados Unidos, Canadá e México.
 <section id="estatisticas" class="section">
 
 <h2 class="section-title">
-📈 Estatísticas da Copa
+📈 Estatísticas da Copa do Mundo
 </h2>
 
 <div class="stats-grid">
@@ -983,41 +592,61 @@ Estados Unidos, Canadá e México.
 </div>
 
 <div class="info-card">
-<h3>🏟️ Jogos</h3>
+<h3>⚽ Jogos</h3>
 <p>104 partidas</p>
+</div>
+
+<div class="info-card">
+<h3>🏟️ Estádios</h3>
+<p>16 sedes oficiais</p>
+</div>
+
+<div class="info-card">
+<h3>📅 Período</h3>
+<p>11/06/2026 até 19/07/2026</p>
 </div>
 
 </div>
 
 </section>
-
 <section id="apostas" class="section">
 
 <h2 class="section-title">
-🎯 Sistema de Apostas
+🎯 Sistema de Palpites
 </h2>
 
 <div class="bet-box">
 
-<label for="jogo">Jogo</label>
+<label for="jogo">
+Escolha o jogo
+</label>
 
 <select id="jogo">
-<option>Brasil x Escócia</option>
-<option>Marrocos x Haiti</option>
-<option>Argentina x Áustria</option>
-<option>Uruguai x Espanha</option>
-<option>Alemanha x Costa do Marfim</option>
-<option>Bélgica x Irã</option>
+
+<option>México x A Definir</option>
+
+<option>Final da Copa do Mundo</option>
+
+<option>Brasil x A Definir</option>
+
+<option>Argentina x A Definir</option>
+
+<option>Estados Unidos x A Definir</option>
+
 </select>
 
-<label for="nome">Seu Nome</label>
+<label for="nome">
+Seu Nome
+</label>
 
 <input
 type="text"
 id="nome"
 placeholder="Digite seu nome">
 
-<label for="palpite">Seu Palpite</label>
+<label for="palpite">
+Seu Palpite
+</label>
 
 <input
 type="text"
@@ -1027,10 +656,14 @@ placeholder="Ex: 2 x 1">
 <button
 class="save-btn"
 onclick="salvarAposta()">
+
 Salvar Palpite
+
 </button>
 
-<div id="historico"></div>
+<div id="historico">
+
+</div>
 
 </div>
 
@@ -1042,18 +675,32 @@ Salvar Palpite
 
 <div class="footer-content">
 
-<h3>⚽ Copa do Mundo 2026</h3>
+<h3>
+🏆 Copa do Mundo FIFA 2026
+</h3>
 
 <p>
-Projeto inspirado no FlashScore
+
+Projeto inspirado no FlashScore.
+
 </p>
 
 <p>
+
 Estados Unidos 🇺🇸 • Canadá 🇨🇦 • México 🇲🇽
+
 </p>
 
 <p>
-GitHub Pages © 2026
+
+Desenvolvido por Katielly ❤️
+
+</p>
+
+<p>
+
+© 2026
+
 </p>
 
 </div>
